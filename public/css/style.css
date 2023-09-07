@@ -42,3 +42,9 @@
     display: flex;
     background-color: var(--secondary);
   }
+
+  .add-blog-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }

@@ -2,7 +2,6 @@
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js
 const sequelize = require('../config/connection');
-const Category = require('./Category');
 
 // Initialize Blog model
 class Blog extends Model {}
@@ -15,9 +14,9 @@ Blog.init(
       allowNull: false,
     },
     description: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,

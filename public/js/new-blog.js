@@ -1,7 +1,7 @@
 async function newFormHandler(event) {
     event.preventDefault();
-    const title = document.querySelector('#dish_name').value;
-    const description = document.querySelector('#description').value;
+    const title = document.querySelector('#blog_title').value;
+    const description = document.querySelector('#blog_description').value;
 
     const response = await fetch(`/api/blog`, {
       method: 'POST',
