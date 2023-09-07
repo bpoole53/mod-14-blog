@@ -1,11 +1,8 @@
 :root {
-    --primary: #389393;
-    --secondary: #f5a25d;
+    --brown: rgb(43, 26, 26);
+    --green: rgb(189, 228, 189);
     --tertiary: #fa7f72;
-    --quatrinary: #6c6b67;
-    --light: #ebebeb;
-    --dark: #182c23;
-    --error: rgb(228, 46, 1);
+    --gray: #6c6b67;
     --border-radius: 0.3rem;
   }
   
@@ -16,14 +13,14 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--quatrinary);
+    background-color: var(--green);
   }
   
   header {
     padding: 40px;
-    text-align: center;
-    background: var(--primary);
-    color: var(--secondary);
+    text-align: left;
+    background: var(--brown);
+    color: var(--gray);
     border-bottom-style: solid;
   }
   
