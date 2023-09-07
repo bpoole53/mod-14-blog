@@ -1,11 +1,13 @@
 :root {
     --brown: rgb(43, 26, 26);
     --green: rgb(189, 228, 189);
-    --tertiary: #fa7f72;
     --gray: #6c6b67;
-    --border-radius: 0.3rem;
   }
   
+  * {
+    box-sizing: border-box;
+
+}  
   body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
@@ -30,17 +32,15 @@
     flex-grow: 1;
   }
   
-  aside {
-    flex: 0;
-    background-color: var(--tertiary);
-    padding: 80px;
-    text-align: left;
-    color: var(--light);
-  }
-  
-  nav {
+  .navbar {
     display: flex;
-    background-color: var(--secondary);
+    flex-direction: row;
+    text-align: left;
+    list-style: none;
+    font-size: 25px;
+    text-decoration: none;
+    padding-right: 30rem;    
+    justify-content: space-around;
   }
 
   .add-blog-container {
@@ -48,3 +48,7 @@
     justify-content: center;
     flex-direction: column;
   }
+
+h1 {
+    font-size: 45px;
+}
