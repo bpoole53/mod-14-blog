@@ -13,7 +13,7 @@ router.get('/signup', async (req, res) => {
 });
 
 router.get('/login', async (req, res) => {
-    res.render('signup');
+    res.render('login');
 });
 
 module.exports = router;
