@@ -9,7 +9,7 @@ const loginFormHandler = async (event) => {
         method: 'POST',
         body: JSON.stringify({ 
             username, 
-            password 
+            password, 
         }),
         headers: { 'Content-Type': 'application/json' },
       });
@@ -24,4 +24,4 @@ const loginFormHandler = async (event) => {
 
   document
   .querySelector('.login-form')
-  .addEventListener('submit', signupFormHandler);
+  .addEventListener('submit', loginFormHandler);
