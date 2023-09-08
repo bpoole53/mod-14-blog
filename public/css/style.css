@@ -91,4 +91,21 @@ h1 {
     border: solid 2px;
     background-color: var(--brown);
     color: var(--gray);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.blog-post-description {
+    padding-left: 1.5rem;
+}
+
+#title {
+    font-size: 1.5rem;
+}
+
+#author {
+    padding-top: .5rem;
 }

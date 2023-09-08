@@ -15,6 +15,7 @@ router.post('/', async (req, res) => {
     const blogData = await Blog.create({
         title: req.body.title,
         description: req.body.description,
+        author: req.body.author,
     });
   // if the blog post is successfully created, the new response will be returned as json
   res.status(200).json(blogData)
