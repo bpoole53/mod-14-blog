@@ -41,6 +41,13 @@
     text-decoration: none;
     padding-right: 30rem;    
     justify-content: space-around;
+    
+  }
+
+  .links {
+    color: white;
+    list-style: none;
+    text-decoration: none;
   }
 
   .add-blog-container {
