@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Blog = require('../models/Blog')
+const User = require('../models/User')
 
 router.get('/', async (req, res) => {
     const blogData = await Blog.findAll().catch((err) => { 
@@ -7,6 +8,14 @@ router.get('/', async (req, res) => {
     });
     const blogs = blogData.map((blog) => blog.get({ plain: true }));
     res.render('home', { blogs });
+    });
+
+router.get('/', async (req, res) => {
+    const userData = await Blog.findAll().catch((err) => { 
+        res.json(err);
+    });
+    const users = userData.map((user) => user.get({ plain: true }));
+    res.render('home', { users });
     });
 
 router.get('/blog', async (req, res) => {

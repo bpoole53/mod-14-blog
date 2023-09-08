@@ -4,6 +4,7 @@ async function newFormHandler(event) {
     const description = document.querySelector('#blog_description').value;
     const author = document.querySelector('#blog_author').value;
 
+    if (title &&  description && author) {
     const response = await fetch(`/api/blog`, {
       method: 'POST',
       body: JSON.stringify({
@@ -22,8 +23,9 @@ async function newFormHandler(event) {
     } else {
       alert('Failed to add blog post');
       console.log('Failed');
-    }
-  }
+    };
+    };
+  };
   
   document
   .querySelector('.new-blog-form')

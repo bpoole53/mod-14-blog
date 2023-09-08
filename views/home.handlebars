@@ -1,17 +1,19 @@
 
 <div class="blog-container">
 
+   
     {{#each blogs as |blog|}}
         <div class="whole-post">
             <div class='blog-post-title'>
                 <p id="title">{{blog.title}}</p>
-                <p id="author">Posted by: {{blog.author}}</p>
-            </div>  
+                <p id="author">Posted by: {{blog.author}}</p>                
+            </div>
                 <div class='blog-post-description'>
-                <p>{{blog.description}}</p>
+                <p>{{blog.description}}</p>                
             </div>
         </div>
     {{/each}}
+    
 
 </div>    
 
