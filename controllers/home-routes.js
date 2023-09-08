@@ -6,13 +6,15 @@ router.get('/', async (req, res) => {
     const blogData = await Blog.findAll().catch((err) => { 
         res.json(err);
     });
+
     const blogs = blogData.map((blog) => blog.get({ plain: true }));   
-    res.render('home', { blogs });
+    res.render('home', { blogs, loggedIn: req.session.loggedIn});
+
     });
 
 
 router.get('/blog', async (req, res) => {
-    res.render('blog');
+res.render('blog', {loggedIn: req.session.loggedIn});
 });
 
 router.get('/signup', async (req, res) => {

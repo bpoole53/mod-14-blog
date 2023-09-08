@@ -18,13 +18,15 @@ router.post('/signup', async (req, res) => {
     });
     
     //save session and set logged in to true
+
     req.session.save(() => {
           req.session.loggedIn = true;
           res.status(200).json(userData);
       });
-} catch (err) {
+  } catch (err) {
   res.status(400).json(err);
-}
+  console.log(err)
+  }
 });
 
 // let the user login
@@ -64,6 +66,17 @@ router.post('/login', async (req, res) => {
       console.log(err);
       res.status(500).json(err);
     }
-  });
+});
 
-module.exports = router;
+//logs the user out
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+
+module.exports = router;  

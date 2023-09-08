@@ -6,6 +6,7 @@ router.use('/blog', blogRoutes);
 router.use('/user', userRoutes);
 router.use('/user/login', userRoutes);
 router.use('/user/signup', userRoutes);
+router.use('/user/logout', userRoutes);
 
 
 module.exports = router;
