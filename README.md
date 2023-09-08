@@ -2,6 +2,9 @@
 
 ![Alt text](./assets/mod-14-screenshot.png)
 
+## Hekroku Deployement
+https://mod-14-blog-81b320cd3a6d.herokuapp.com/
+
 ## Description
 This is an application that gives a backend structure to a commerce database
 
