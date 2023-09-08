@@ -6,17 +6,10 @@ router.get('/', async (req, res) => {
     const blogData = await Blog.findAll().catch((err) => { 
         res.json(err);
     });
-    const blogs = blogData.map((blog) => blog.get({ plain: true }));
+    const blogs = blogData.map((blog) => blog.get({ plain: true }));   
     res.render('home', { blogs });
     });
 
-router.get('/', async (req, res) => {
-    const userData = await Blog.findAll().catch((err) => { 
-        res.json(err);
-    });
-    const users = userData.map((user) => user.get({ plain: true }));
-    res.render('home', { users });
-    });
 
 router.get('/blog', async (req, res) => {
     res.render('blog');

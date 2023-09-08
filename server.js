@@ -1,7 +1,10 @@
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require ('path');
 const routes = require('./controllers');
+const session = require('express-session');
+const sequelize = require('./config/connection');
 
 const hbs = exphbs.create({});
 
@@ -16,10 +19,17 @@ app.set('view engine', 'handlebars');
 
 app.use(routes);
 
+const sess = {
+    secret: 'Super secret secret',
+    resave: false,
+    saveUninitialized: true,
+  };
+  
+app.use(session(sess));
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./controllers/home-routes'));
 
-app.listen(PORT, () => {
-    console.log('Server listening on: http://localhost:' + PORT);
-  });
-  
+sequelize.sync({ force: false }).then(() => {
+app.listen(PORT, () => console.log('Now listening on: http://localhost:' + PORT));
+});

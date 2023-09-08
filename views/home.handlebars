@@ -13,8 +13,50 @@
             </div>
         </div>
     {{/each}}
+
+    {{#if loggedIn}}
+    <div class='add-blog-container'>
+        <h2>
+        Welcome to the blog!
+        </h2>   
+        <form class='new-blog-form'>
+        <label for='blog_title'>
+            Title:
+        </label>
+        <br />
+        <textarea id='blog_title' name='blog_title' rows='2' cols='30'>
+            {{title}}
+        </textarea>
+        <br />
+        <label for='description'>
+            Description:
+        </label>
+        <br />
+        <textarea id='blog_description' name='blog_description' rows='5' cols='30'>
+            {{description}}
+        </textarea>
+        <br />
+        <label for='author'>
+            Author:
+        </label>
+        <br />
+        <textarea id='blog_author' name='blog_author' rows='5' cols='30'>
+            {{!-- {{author}} --}}
+        </textarea>      
+        
+        <button type='submit' value="Submit">
+            Submit        
+        </button>
+        </form>
+    </div>
+    {{/if}}
+
+
+
+
     
 
 </div>    
 
 
+<script src='/js/new-blog.js'></script> 

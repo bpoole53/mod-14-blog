@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/css/style.css">
 
+{{#if loggedIn}}
 <div class='add-blog-container'>
     <h2>
       Welcome to the blog!
@@ -35,6 +36,9 @@
     </form>
   </div>
 </div>
+{{else}}
+<a href="/login" id="login-warning">You must login first to make a blog post</a>
+{{/if}}
 
 <!-- This is the form for adding a new blog -->
 <script src='/js/new-blog.js'></script> 
